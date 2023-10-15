@@ -34,7 +34,7 @@ def get_name_space():
 
 if __name__ == '__main__':
     auth_util_ip.init()
-    service_endpoint = ("https://access-governance." + os.environ["ADMIN_REGION_SERVICE_INSTANCE"]
+    service_endpoint = ("https://access-governance." + os.environ["OCI_REGION"]
                         + ".oci.oraclecloud.com")
     signer_object = auth_util_ip.get_si_signer()
     access_governance_cp_client = oci.access_governance_cp.AccessGovernanceCPClient(config={}, signer=signer_object,
